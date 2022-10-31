@@ -1,0 +1,225 @@
+/* font-family: 'Montserrat', sans-serif; 
+čára pod happy travels chybí*/
+
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #8B8B8B;
+    font-weight: 300;
+    background-color: #FAFAFA;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 60px 20px
+}
+
+.inner {
+    max-width: 460px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+h1 {
+    font-size: 28px;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+h2 {
+    color: black;
+    font-weight: 500;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.img {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 40px auto;
+}
+
+
+
+.button {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #8B8B8B;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.blue {
+    background-color: #407BFF;
+}
+
+.button + .button {
+    margin-top: 10px;
+}
+
+
+/* .flex {
+    display: flex;
+    
+} */
+
+.paragraph {
+    margin-bottom: 30px;
+}
+
+.frame {
+    display: flex;
+    padding: 20px;
+    border: 1px solid #407BFF1F;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #407BFF1F;
+    background-color: white;
+}
+
+.frame + .frame {
+    margin-top: 15px;
+}
+
+.icon {
+    width: 40px;
+}
+
+.icon + .text {
+    margin-left: 30px;
+}
+
+.text {
+    font-size: 13px;
+}
+
+
+/*jsou ty texty nastavené na max-width v té předloze?
+mají se rámečky roztahovat víc do krajů než text??*/
+
+@media screen and (min-width: 640px) {
+    .inner {
+        max-width: 550px;
+    }
+    .img {
+        max-width: 400px;
+        margin-bottom: 30px;
+    }
+    h2 {
+        margin-top: 80px;
+    }
+    .paragraph {
+        margin-bottom: 40px;
+    }
+    .box {
+        display: flex;
+        max-width: 100%;
+        justify-content: center;
+    }
+    .frame {
+        display: block;
+        padding: 40px 15px 20px 15px;
+        flex: 0 0 calc((100% - 40px) / 3);
+    }
+    .icon + .text {
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+    .frame + .frame {
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+    .flex {
+        display: flex;
+        justify-content: center;
+    }
+
+    .button {
+        margin: 0;
+    }
+
+    .button + .button {
+        margin-top: 0px;
+        margin-left: 20px;
+    } 
+}
+
+@media screen and (min-width: 1100px) {
+    body {
+        padding: 60px 80px;
+    }
+    
+    .desktop-flex {
+        display: flex;
+        max-width: 1040px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .reverse {
+        flex-direction: row-reverse;
+    }
+    .desktop-flex + .desktop-flex {
+        margin-top: 80px;
+    }
+
+    h1, h2, p {
+        text-align: left;
+    }
+
+    .frame p {
+        text-align: center;
+    }
+
+    .img {
+        max-width: 425px;
+        
+    }
+    .inner + .inner .reverse {
+        margin-right: 60px;
+    }
+
+    /*je na tohle nějaký jednodušší automatický způsob?*/
+
+    .first + .inner {
+        margin-left: 60px;
+    }
+
+    .inner + .first {
+        margin-right: 60px;
+    }
+    
+    .thin {
+        max-width: 430px;
+    }
+
+    .flex {
+        justify-content: left;
+    }
+
+    .first {
+        order: -1;
+    }
+
+   h2 {
+    margin-top: 0;
+   }
+
+   .thin .paragraph {
+    margin: 0;
+   }
+}
