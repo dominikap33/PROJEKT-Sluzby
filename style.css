@@ -1,5 +1,4 @@
-/* font-family: 'Montserrat', sans-serif; 
-čára pod happy travels chybí*/
+/* font-family: 'Montserrat', sans-serif;*/
 
 html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
@@ -30,6 +29,22 @@ h1 {
     font-weight: 500;
     margin-bottom: 40px;
     margin-top: 0;
+}
+
+.underline {
+    position: relative;
+}
+
+.underline:after {
+    position: absolute;
+    content:'';
+    height: 2px;
+    width: 60px;
+    bottom: -4px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background: #407BFF;
 }
 
 h2 {
@@ -72,11 +87,6 @@ h2 {
 }
 
 
-/* .flex {
-    display: flex;
-    
-} */
-
 .paragraph {
     margin-bottom: 30px;
 }
@@ -107,7 +117,7 @@ h2 {
 }
 
 
-/*jsou ty texty nastavené na max-width v té předloze?
+/*
 mají se rámečky roztahovat víc do krajů než text??*/
 
 @media screen and (min-width: 640px) {
@@ -193,8 +203,6 @@ mají se rámečky roztahovat víc do krajů než text??*/
         margin-right: 60px;
     }
 
-    /*je na tohle nějaký jednodušší automatický způsob?*/
-
     .first + .inner {
         margin-left: 60px;
     }
@@ -220,6 +228,10 @@ mají se rámečky roztahovat víc do krajů než text??*/
    }
 
    .thin .paragraph {
+    margin: 0;
+   }
+
+   .underline:after {
     margin: 0;
    }
 }
