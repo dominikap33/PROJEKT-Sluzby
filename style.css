@@ -94,7 +94,6 @@ h2 {
 .frame {
     display: flex;
     padding: 20px;
-    border: 1px solid #407BFF1F;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #407BFF1F;
     background-color: white;
@@ -105,7 +104,7 @@ h2 {
 }
 
 .icon {
-    width: 40px;
+    height: 40px;
 }
 
 .icon + .text {
